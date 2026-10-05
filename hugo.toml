@@ -1,0 +1,47 @@
+baseURL = 'https://leipt.com/'
+locale = 'en_US'
+title = 'Fredrik | leipt.com'
+enableRobotsTXT = true
+disableKinds = ['taxonomy', 'term']
+
+[params]
+  name = 'Fredrik'
+  description = 'A personal site for work, research, open source, writing, and speaking.'
+
+[outputs]
+  home = ['HTML', 'RSS']
+  section = ['HTML', 'RSS']
+
+[menu]
+  [[menu.main]]
+    name = 'About'
+    pageRef = '/about'
+    weight = 10
+  [[menu.main]]
+    name = 'Work'
+    pageRef = '/work'
+    weight = 20
+  [[menu.main]]
+    name = 'Research'
+    pageRef = '/research'
+    weight = 30
+  [[menu.main]]
+    name = 'Open Source'
+    pageRef = '/open-source'
+    weight = 40
+  [[menu.main]]
+    name = 'Writing'
+    pageRef = '/writing'
+    weight = 50
+  [[menu.main]]
+    name = 'Speaking'
+    pageRef = '/speaking'
+    weight = 60
+  [[menu.main]]
+    name = 'CV'
+    pageRef = '/cv'
+    weight = 70
+  [[menu.main]]
+    name = 'Contact & Identity'
+    pageRef = '/contact'
+    weight = 80

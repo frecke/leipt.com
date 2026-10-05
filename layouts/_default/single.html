@@ -1,0 +1,7 @@
+{{ define "main" }}
+  <article class="page-content">
+    <p class="eyebrow">leipt.com / {{ .Section | default "profile" }}</p>
+    <h1>{{ .Title }}</h1>
+    <div class="prose">{{ .Content }}</div>
+  </article>
+{{ end }}
