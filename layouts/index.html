@@ -1,0 +1,24 @@
+{{ define "main" }}
+  <section class="hero" aria-labelledby="home-title">
+    <p class="eyebrow">Fredrik · leipt.com</p>
+    <h1 id="home-title">Ideas, practice,<br><em>and public work.</em></h1>
+    <p class="lede">A home for work, research, open source, writing, and speaking.</p>
+    <div class="hero-actions"><a class="button" href="{{ "about/" | relURL }}">About Fredrik <span aria-hidden="true">↗</span></a><a class="text-link" href="{{ "contact/" | relURL }}">Contact & identity →</a></div>
+  </section>
+  <section class="intro prose" aria-label="Introduction">{{ .Content }}</section>
+  <section class="section-grid" aria-labelledby="explore-title">
+    <div class="section-heading"><p class="eyebrow">Explore</p><h2 id="explore-title">Areas of this site</h2></div>
+    <div class="cards">
+      {{ range slice
+        (dict "label" "01" "title" "Work" "text" "Practice and selected work." "url" "work/")
+        (dict "label" "02" "title" "Research" "text" "Questions, notes, and publications." "url" "research/")
+        (dict "label" "03" "title" "Open Source" "text" "Projects and contributions." "url" "open-source/")
+        (dict "label" "04" "title" "Writing" "text" "Essays and technical notes." "url" "writing/")
+        (dict "label" "05" "title" "Speaking" "text" "Talks and topics." "url" "speaking/")
+        (dict "label" "06" "title" "CV" "text" "Professional history." "url" "cv/")
+      }}
+        <a class="card" href="{{ .url | relURL }}"><span class="card-number">{{ .label }}</span><h3>{{ .title }} <span aria-hidden="true">↗</span></h3><p>{{ .text }}</p></a>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}
