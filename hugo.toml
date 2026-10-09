@@ -1,12 +1,12 @@
 baseURL = 'https://leipt.com/'
 locale = 'en_US'
-title = 'Fredrik | leipt.com'
+title = 'Fredrik Rundgren | leipt.com'
 enableRobotsTXT = true
 disableKinds = ['taxonomy', 'term']
 
 [params]
-  name = 'Fredrik'
-  description = 'A personal site for work, research, open source, writing, and speaking.'
+  name = 'Fredrik Rundgren'
+  description = 'Fredrik Rundgren on data and analytics, architecture, governance, open source, research, and speaking.'
 
 [outputs]
   home = ['HTML', 'RSS']
