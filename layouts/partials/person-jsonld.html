@@ -1,2 +1,3 @@
-{{ $person := dict "@context" "https://schema.org" "@type" "Person" "name" .Site.Params.name "url" .Site.BaseURL "email" "fredrik@leipt.com" "sameAs" (slice "https://github.com/frecke" "https://www.linkedin.com/in/fredrikrundgren/") }}
+{{ $workplace := dict "@type" "Organization" "name" "Redpill Linpro" "url" "https://www.redpill-linpro.com/en/" }}
+{{ $person := dict "@context" "https://schema.org" "@type" "Person" "name" .Site.Params.name "url" .Site.BaseURL "email" "fredrik@leipt.com" "sameAs" (slice "https://github.com/frecke" "https://www.linkedin.com/in/fredrikrundgren/") "worksFor" $workplace }}
 <script type="application/ld+json">{{ $person | jsonify | safeJS }}</script>

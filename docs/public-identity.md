@@ -1,6 +1,6 @@
 # Public identity files
 
-The contact page links to `static/foaf.ttl`, which Hugo copies to `/foaf.ttl`. The HTML head advertises it as Turtle. Keep the FOAF and schema.org Person records limited to confirmed public facts. Do not add `foaf:knows` without the other person's consent or assert unverified account ownership. Future project links or open-data files can live in `static/` and be linked from the contact page.
+The contact page links to `static/foaf.ttl`, which Hugo copies to `/foaf.ttl`. The HTML head advertises it as Turtle. The FOAF profile links Fredrik to the official Redpill Linpro homepage with `foaf:workplaceHomepage` and describes the organization with its own local URI. The homepage's schema.org Person record uses `worksFor` for the same affiliation. Keep both records limited to confirmed public facts. Do not add `foaf:knows` without the other person's consent or assert unverified account ownership. Future project links or open-data files can live in `static/` and be linked from the contact page.
 
 ## Published OpenPGP key
 
