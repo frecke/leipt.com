@@ -12,6 +12,7 @@ This branch drafts public-facing copy. It is visible in the public source reposi
 | AI, security and post-quantum interests; open-source affinity; outdoor and making interests | Fredrik's direct statement in this drafting session | Wording avoids claiming specialist status or giving a cabin location |
 | DataGovOps, DataGovSecOps, hostsctl | Public README files in Fredrik's GitHub repositories | Confirm these are the projects to feature |
 | LinkedIn profile | Public profile at linkedin.com/in/fredrikrundgren | Confirm preferred profile URL |
+| Public email, FOAF profile, and future OpenPGP/S/MIME publication | Fredrik's direct request in this drafting session | Email is approved for the page; verify the exact public key and certificate before replacing TODOs |
 
 The research note and essay are original **drafts** with draft: true. Their arguments are proposed wording for Fredrik to edit; they do not claim external validation or prior publication. The speaking topics are proposals, not a past-events list. Earlier roles, degrees, certifications, clients, publications, talks, and research identifiers were left out where the record was incomplete.
 

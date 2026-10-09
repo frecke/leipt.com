@@ -1,2 +1,2 @@
-{{ $person := dict "@context" "https://schema.org" "@type" "Person" "name" .Site.Params.name "url" .Site.BaseURL }}
+{{ $person := dict "@context" "https://schema.org" "@type" "Person" "name" .Site.Params.name "url" .Site.BaseURL "email" "fredrik@leipt.com" "sameAs" (slice "https://github.com/frecke" "https://www.linkedin.com/in/fredrikrundgren/") }}
 <script type="application/ld+json">{{ $person | jsonify | safeJS }}</script>

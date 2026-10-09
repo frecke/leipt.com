@@ -7,6 +7,7 @@
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
   {{ with .Description }}<meta name="description" content="{{ . }}">{{ else }}<meta name="description" content="{{ .Site.Params.description }}">{{ end }}
   <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="alternate" type="text/turtle" title="FOAF profile" href="{{ "foaf.ttl" | relURL }}">
   <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
   {{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }} RSS" href="{{ .Permalink }}">{{ end }}
   {{ if .Site.Params.preview }}<meta name="robots" content="noindex,nofollow">{{ end }}
