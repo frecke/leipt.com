@@ -9,6 +9,7 @@ For a professional enquiry, email [fredrik@leipt.com](mailto:fredrik@leipt.com).
 
 - [GitHub — frecke](https://github.com/frecke)
 - [LinkedIn — Fredrik Rundgren](https://www.linkedin.com/in/fredrikrundgren/)
+- [Current workplace — Redpill Linpro](https://www.redpill-linpro.com/en/)
 
 This site and those profiles are the public places I use to connect my writing and technical work.
 
@@ -24,4 +25,4 @@ Please use [email](mailto:fredrik@leipt.com) for ordinary contact. No private ke
 
 ## Linked data
 
-A small [FOAF profile](../foaf.ttl) describes my public name, homepage, and email in a machine-readable format. I like the idea of a web where people and projects can link to each other through open data. I may extend this profile with verified project and research identifiers later; TODO — add those identifiers only after checking them.
+A small [FOAF profile](../foaf.ttl) describes my public name, homepage, email, and current workplace in a machine-readable format. I like the idea of a web where people and projects can link to each other through open data. I may extend this profile with verified project and research identifiers later; TODO — add those identifiers only after checking them.
