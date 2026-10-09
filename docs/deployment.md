@@ -12,8 +12,8 @@ In the one.com control panel, record the active site/webspace, domain mapping, h
 
 1. After the inventory, create a new empty `leipt-preview` directory directly under the SFTP login's public starting folder. Confirm it does not already hold unrelated content.
 2. Put a file named `.leipt-deploy-root` in that directory containing exactly `leipt-preview-v1` and a newline. This marker is required by the deployment script; it is not created by CI.
-3. In GitHub, create a `onecom-preview` environment and optionally restrict it to `main` and require a reviewer. Add environment secrets: `ONECOM_SFTP_HOST`, `ONECOM_SFTP_PORT` (usually `22`), `ONECOM_SFTP_USER`, `ONECOM_SFTP_PASSWORD`, and `ONECOM_SFTP_KNOWN_HOSTS` (an OpenSSH known-hosts line verified out of band).
-4. Run the manual **Deploy one.com preview** workflow on `main`. It builds with a preview base URL and uploads only files from `public/` into the marked directory. It does not remove remote files.
+3. In GitHub, create a `onecom-preview` environment and optionally restrict it to `main` and require a reviewer. Add environment secrets: `ONECOM_SFTP_HOST`, `ONECOM_SFTP_PORT` (usually `22`), `ONECOM_SFTP_USER`, `ONECOM_SFTP_PASSWORD`, and `ONECOM_SFTP_KNOWN_HOSTS` (an OpenSSH known-hosts line verified out of band). Use the [age + gh secrets workflow](secrets.md) to keep an encrypted local copy and sync the values.
+4. Run the manual **Deploy one.com preview** workflow on `main`. It runs `just preview` and uploads only files from `public-preview/` into the marked directory. It does not remove remote files.
 5. Check the preview in a browser and compare it against the intended content. Keep the preview out of search results until launch.
 
 The workflow's target is hardcoded as `leipt-preview` and rejects a missing or mismatched marker. It uses strict host-key checking. The generated preview includes `noindex`; canonical production metadata is reserved for the eventual root deployment.

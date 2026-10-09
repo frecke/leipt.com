@@ -1,4 +1,8 @@
 /public/
+/public-preview/
+/.venv/
+/.ruff_cache/
+*.agekey
 /resources/
 /.hugo_build.lock
 .DS_Store

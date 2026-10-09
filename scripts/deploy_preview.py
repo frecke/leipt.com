@@ -3,13 +3,12 @@
 from __future__ import annotations
 
 import os
-from pathlib import Path
 import stat
 import tempfile
 from errno import ENOENT
+from pathlib import Path
 
 import paramiko
-
 
 TARGET = "leipt-preview"
 MARKER = ".leipt-deploy-root"
@@ -24,9 +23,9 @@ def required(name: str) -> str:
 
 
 def main() -> None:
-    public = Path("public")
+    public = Path("public-preview")
     if not (public / "index.html").is_file():
-        raise RuntimeError("Missing Hugo output: public/index.html")
+        raise RuntimeError("Missing Hugo output: public-preview/index.html")
 
     host = required("ONECOM_SFTP_HOST")
     user = required("ONECOM_SFTP_USER")
@@ -42,8 +41,15 @@ def main() -> None:
         client = paramiko.SSHClient()
         client.load_host_keys(str(known_hosts_file))
         client.set_missing_host_key_policy(paramiko.RejectPolicy())
-        client.connect(hostname=host, port=port, username=user, password=password,
-                       look_for_keys=False, allow_agent=False, timeout=20)
+        client.connect(
+            hostname=host,
+            port=port,
+            username=user,
+            password=password,
+            look_for_keys=False,
+            allow_agent=False,
+            timeout=20,
+        )
         try:
             sftp = client.open_sftp()
             try:
@@ -67,7 +73,9 @@ def main() -> None:
                             sftp.mkdir(remote)
                             remote_stat = sftp.lstat(remote)
                         if not stat.S_ISDIR(remote_stat.st_mode):
-                            raise RuntimeError(f"Remote path is not a directory: {relative}")
+                            raise RuntimeError(
+                                f"Remote path is not a directory: {relative}"
+                            )
                     elif local.is_file():
                         try:
                             remote_stat = sftp.lstat(remote)
@@ -76,7 +84,9 @@ def main() -> None:
                                 raise
                         else:
                             if not stat.S_ISREG(remote_stat.st_mode):
-                                raise RuntimeError(f"Remote path is not a regular file: {relative}")
+                                raise RuntimeError(
+                                    f"Remote path is not a regular file: {relative}"
+                                )
                         sftp.put(str(local), remote)
             finally:
                 sftp.close()

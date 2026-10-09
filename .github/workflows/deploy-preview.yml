@@ -17,19 +17,15 @@ jobs:
     environment: onecom-preview
     steps:
       - uses: actions/checkout@v4
-      - name: Install pinned Hugo Extended
-        run: |
-          curl --fail --location --silent --show-error -o hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v0.167.0/hugo_extended_0.167.0_linux-amd64.tar.gz
-          tar -xzf hugo.tar.gz hugo
-          sudo install -m 0755 hugo /usr/local/bin/hugo
+      - uses: jdx/mise-action@v3
+      - name: Install locked Python dependencies
+        run: just setup
       - name: Build isolated preview
-        run: hugo --minify --panicOnWarning --config hugo.toml,config/preview.toml --baseURL https://leipt.com/leipt-preview/
+        run: just preview
       - name: Check output
         run: |
-          test -s public/index.html
-          test -s public/sitemap.xml
-      - name: Install SFTP client
-        run: python -m pip install --disable-pip-version-check paramiko==3.5.1
+          test -s public-preview/index.html
+          test -s public-preview/sitemap.xml
       - name: Upload to marked preview directory
         env:
           ONECOM_SFTP_HOST: ${{ secrets.ONECOM_SFTP_HOST }}
@@ -37,4 +33,4 @@ jobs:
           ONECOM_SFTP_USER: ${{ secrets.ONECOM_SFTP_USER }}
           ONECOM_SFTP_PASSWORD: ${{ secrets.ONECOM_SFTP_PASSWORD }}
           ONECOM_SFTP_KNOWN_HOSTS: ${{ secrets.ONECOM_SFTP_KNOWN_HOSTS }}
-        run: python scripts/deploy_preview.py
+        run: uv run --locked python scripts/deploy_preview.py

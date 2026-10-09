@@ -4,14 +4,23 @@ Fredrik's personal site, built with Hugo and Markdown. The intended public repos
 
 ## Local development
 
-Install [Hugo Extended v0.167.0](https://github.com/gohugoio/hugo/releases/tag/v0.167.0), then:
+Install [mise](https://mise.jdx.dev/getting-started.html) and activate it in your shell, then:
 
 ```sh
-hugo server -D
-hugo --minify
+mise trust
+mise install
+just setup
+just doctor
+just dev
 ```
 
-Open the local address printed by Hugo. Generated files appear in `public/` and are ignored by Git.
+Open the local address printed by Hugo. `mise.toml` pins Hugo Extended, Python, uv, just, age, and gh. uv owns the Python environment and committed `uv.lock`; the site itself remains Hugo and Markdown.
+
+Run `just` to list commands. Use `just fmt` to format Python tooling, `just check` (or `just ci`) for the local/CI gate, and `just build` for production output in `public/`. `just preview` builds a noindex preview in `public-preview/` without uploading. Generated files and `.venv/` are ignored by Git. Without shell activation, use `mise exec -- just check`.
+
+## Secrets
+
+Use age for encrypted local secrets and `gh` for GitHub's `onecom-preview` environment secrets. See [the secrets workflow](docs/secrets.md). Keys stay outside the repository; secret values never belong in command arguments, commits, or logs.
 
 ## Editing
 
