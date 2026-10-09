@@ -17,3 +17,7 @@ I am developing an independent research agenda rather than presenting a publicat
 I want this work to be useful to practitioners and open to critique. A model is only interesting if it can be applied, challenged with counterexamples, and revised in the light of evidence.
 
 Research notes will appear here as they are ready. I will label hypotheses, implementations, and evaluated findings separately.
+
+## Areas I am learning about
+
+AI raises practical governance questions about provenance, access, accountability, and what a system can actually be trusted to do. I am also interested in cybersecurity and post-quantum cryptography. These are areas of active learning for me, not specialist credentials or claims of research results. I expect to learn through public sources, working examples, and conversations with practitioners who know them well.
