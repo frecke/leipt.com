@@ -19,6 +19,10 @@ How can contracts, metadata, provenance, and policy checks help people make bett
 
 Open source alone does not guarantee autonomy. This talk explores the architectural and organisational choices that determine whether a team can understand, move, and improve its systems.
 
+### AI beyond the demonstration
+
+How do teams move from an impressive AI prototype to something they can govern, operate, and improve? A proposed talk about provenance, access, evaluation, human responsibility, and the work that remains after a demo succeeds.
+
 These are talk proposals, not a list of past public appearances. I will add recordings, slides, and event details only when they exist and are cleared for sharing.
 
 ## Short speaker bio
