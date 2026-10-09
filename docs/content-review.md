@@ -9,6 +9,7 @@ This branch drafts public-facing copy. It is visible in the public source reposi
 | Cegal / SQL Service Nordic, 2018–2026 | Fredrik's public LinkedIn announcement | Confirm dates and whether to name both organisations |
 | Head of Data Analytics as a Service and Team Lead at Cegal | [Cegal announcement](https://www.cegal.com/da/resources/med-fredrik-rundgren-f%C3%A5r-data-analytics-tydeligt-ejerskab) | Confirm title and phrasing |
 | Customer talks and workshops, including Atollo | Fredrik's direct statement in this drafting session | Confirm how much to say publicly; no customer names or event claims added |
+| AI, security and post-quantum interests; open-source affinity; outdoor and making interests | Fredrik's direct statement in this drafting session | Wording avoids claiming specialist status or giving a cabin location |
 | DataGovOps, DataGovSecOps, hostsctl | Public README files in Fredrik's GitHub repositories | Confirm these are the projects to feature |
 | LinkedIn profile | Public profile at linkedin.com/in/fredrikrundgren | Confirm preferred profile URL |
 
