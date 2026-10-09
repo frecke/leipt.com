@@ -17,11 +17,15 @@ Fredrik supplied the Ed25519 public key in `static/keys/fredrik-leipt-com-ed2551
 3. Record the full fingerprint from the key itself. Put the `.asc` file in `static/keys/`, link it from `content/contact.md`, and display the full fingerprint beside the link.
 4. Download the built file and check that its fingerprint matches the reviewed source. Consider a Web Key Directory later, after reviewing one.com's existing `/.well-known` paths and avoiding changes to unrelated files.
 
-## S/MIME publication checklist
+## Published S/MIME certificate
+
+Fredrik approved publication of the public certificate from his macOS login Keychain on 2026-10-09 after reviewing that its signed identities include both `fredrik@leipt.com` and `fredrik.rundgren@leipt.com`. The file in `static/certs/fredrik-leipt-com-smime.pem` contains one PEM `CERTIFICATE` block and no private key. Its end-entity certificate has `CA:FALSE`, E-mail Protection extended key usage, and Digital Signature and Key Encipherment key usage. The issuer is WISeKey CertifyID Personal GB CA 3; expiry is 2028-10-03. The SHA-256 fingerprint of the DER certificate is `FF2B25D72714D5BD7FC7ABDB71DE99C636EDAEA663DB6460546ABCE145B0CE1C`, independently checked with `openssl x509 -fingerprint -sha256` and a SHA-256 digest of DER output. This is a public-certificate export only; the private key remains in Keychain.
+
+## S/MIME rotation checklist
 
 1. Obtain the public end-entity certificate only (`.cer`, `.crt`, or public-certificate PEM). Do not export or commit a `.p12`/`.pfx` bundle, a private key, or a PEM containing `PRIVATE KEY`.
 2. Inspect subject, email addresses, issuer, validity dates, and key usage. Confirm the address and certificate are the ones Fredrik wants public. Decide whether to include an intermediate certificate separately; do not publish a chain by accident.
 3. Record the certificate's SHA-256 fingerprint. Put the public certificate in `static/certs/`, link it from `content/contact.md`, and display the fingerprint and expiry date beside the link.
 4. Download the built file and confirm its fingerprint matches the reviewed source. When rotating or revoking a certificate, update the page promptly and retain an accurate status note if an old link must remain.
 
-The repository is public, so review the full contents of each file before committing. A public certificate can still reveal names, addresses, issuer details, and validity dates. The S/MIME certificate remains a TODO until its public file is provided and verified.
+The repository is public, so review the full contents of each file before committing. A public certificate can reveal names, addresses, issuer details, and validity dates. Review certificate status before rotation or revocation and update the page when those facts change.

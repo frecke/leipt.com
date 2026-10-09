@@ -15,7 +15,7 @@ This branch drafts public-facing copy. It is visible in the public source reposi
 | Public email and FOAF profile | Fredrik's direct request in this drafting session | Confirm wording and links |
 | OpenPGP key | Public directory lookup for fredrik@leipt.com; parsed public key and fingerprint | Fredrik should independently confirm the displayed fingerprint is his active email key |
 | SSH key | Fredrik supplied the public key directly; `ssh-keygen` fingerprint check | Confirm this is the SSH key he wants to advertise |
-| S/MIME certificate | Fredrik requested publication; no certificate file supplied yet | Keep TODO until a public-only certificate and fingerprint are verified |
+| S/MIME certificate | Public certificate found in Fredrik's login Keychain; Fredrik explicitly approved publishing both email identities | Confirm displayed fingerprint and expiry; no private key was exported |
 
 The research note and essay are original **drafts** with draft: true. Their arguments are proposed wording for Fredrik to edit; they do not claim external validation or prior publication. The speaking topics are proposals, not a past-events list. Earlier roles, degrees, certifications, clients, publications, talks, and research identifiers were left out where the record was incomplete.
 
