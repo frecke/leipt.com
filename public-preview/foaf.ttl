@@ -1,0 +1,16 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://leipt.com/foaf.ttl> a foaf:PersonalProfileDocument ;
+    foaf:primaryTopic <https://leipt.com/foaf.ttl#me> .
+
+<https://leipt.com/foaf.ttl#me> a foaf:Person ;
+    foaf:name "Fredrik Rundgren" ;
+    foaf:mbox <mailto:fredrik@leipt.com> ;
+    foaf:homepage <https://leipt.com/> ;
+    foaf:workplaceHomepage <https://www.redpill-linpro.com/en/> ;
+    foaf:page <https://github.com/frecke> ,
+              <https://www.linkedin.com/in/fredrikrundgren/> .
+
+<https://leipt.com/foaf.ttl#redpill-linpro> a foaf:Organization ;
+    foaf:name "Redpill Linpro" ;
+    foaf:homepage <https://www.redpill-linpro.com/en/> .
